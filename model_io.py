@@ -25,4 +25,4 @@ MAX_WICKETS = 10.0
 META_KEY_MODEL = "embedding_remaining_v2"
 
 # Path to per-player priors artifact (produced by build_player_priors.py)
-PLAYER_PRIORS_PATH = "player_priors.csv"
+PLAYER_PRIORS_PATH = "data/player_priors.csv"

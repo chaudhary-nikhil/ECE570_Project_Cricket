@@ -12,7 +12,7 @@ import pandas as pd
 
 import backend
 
-MATCH_TOTALS_CSV = os.environ.get("IPL_MATCH_TOTALS_CSV", "ipl_match_team_totals.csv")
+MATCH_TOTALS_CSV = os.environ.get("IPL_MATCH_TOTALS_CSV", "data/ipl_match_team_totals.csv")
 _MAX_ROWS_PRINT = 40
 _MAX_CHARS = 6000
 

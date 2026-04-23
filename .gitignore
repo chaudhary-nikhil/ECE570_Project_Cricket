@@ -1,0 +1,46 @@
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*.pyo
+*.egg-info/
+.eggs/
+build/
+dist/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# ---- Virtual environments ----
+.venv/
+venv/
+env/
+
+# ---- OS / editor ----
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# ---- Secrets / local config ----
+.env
+.env.*
+!.env.example
+secrets.*
+*.local
+
+# ---- Large local datasets (not committed to GitHub) ----
+# External Kaggle dataset managed by kagglehub cache (symlink).
+data/kaggle_ipl_dataset/
+# Upstream raw ball-by-ball files (too large for git; document sources in README).
+data/ipl_data.csv
+data/t20_wc_2024_deliveries.csv
+
+# ---- Stray nested git repo (if present) ----
+ECE570_Project_Cricket/
+
+# ---- Misc ----
+*.tmp
+*.bak
+*~

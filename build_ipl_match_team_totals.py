@@ -19,13 +19,13 @@ def main() -> None:
     parser.add_argument(
         "--input",
         type=Path,
-        default=Path("kaggle_ipl_dataset/IPL.csv"),
+        default=Path("data/kaggle_ipl_dataset/IPL.csv"),
         help="Path to IPL.csv (ball-by-ball)",
     )
     parser.add_argument(
         "--output",
         type=Path,
-        default=Path("ipl_match_team_totals.csv"),
+        default=Path("data/ipl_match_team_totals.csv"),
         help="Output CSV path",
     )
     args = parser.parse_args()

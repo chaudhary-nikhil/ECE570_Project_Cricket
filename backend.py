@@ -11,8 +11,8 @@ import tensorflow as tf
 from model_io import MAX_WICKETS, PLAYER_PRIORS_PATH, T20_MAX_OVERS
 
 
-MODEL_PATH = "cricket_model.h5"
-ENCODERS_PATH = "label_encoders.pkl"
+MODEL_PATH = "artifacts/cricket_model.h5"
+ENCODERS_PATH = "artifacts/label_encoders.pkl"
 # currentMatches returns full match objects including "venue"; cricScore returns minimal score-only data
 CURRENT_MATCHES_URL = "https://api.cricapi.com/v1/currentMatches"
 CRIC_SCORE_URL = "https://api.cricapi.com/v1/cricScore"

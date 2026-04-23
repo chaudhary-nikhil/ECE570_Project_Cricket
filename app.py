@@ -14,7 +14,7 @@ import weather
 
 DEFAULT_API_KEY = "2cecc518-dfe7-4fa0-baaf-446cd5060795"
 BACKEND_PREDICT_URL = "http://127.0.0.1:8000/predict"
-TOTALS_CSV_PATH = "ipl_match_team_totals.csv"
+TOTALS_CSV_PATH = "data/ipl_match_team_totals.csv"
 
 
 def chat_url_from_predict_url(predict_url: str) -> str:
@@ -73,7 +73,7 @@ def load_team_options() -> List[str]:
     in that case, we'll just use the teams from the selected match.
     """
     try:
-        df = pd.read_csv("ipl_data.csv", usecols=["bat_team"])
+        df = pd.read_csv("data/ipl_data.csv", usecols=["bat_team"])
     except Exception:  # noqa: BLE001
         return []
 

@@ -17,11 +17,11 @@ from model_io import (
 )
 
 # ------------ Config ------------
-IPL_CSV_PATH = "ipl_data.csv"
-T20_CSV_PATH = "t20_wc_2024_deliveries.csv"
-KAGGLE_IPL_CSV_PATH = "kaggle_ipl_dataset/IPL.csv"
-MODEL_PATH = "cricket_model.h5"
-ENCODERS_PATH = "label_encoders.pkl"
+IPL_CSV_PATH = "data/ipl_data.csv"
+T20_CSV_PATH = "data/t20_wc_2024_deliveries.csv"
+KAGGLE_IPL_CSV_PATH = "data/kaggle_ipl_dataset/IPL.csv"
+MODEL_PATH = "artifacts/cricket_model.h5"
+ENCODERS_PATH = "artifacts/label_encoders.pkl"
 
 # Kaggle IPL.csv overlaps heavily with the legacy ipl_data.csv. When both are
 # present, prefer the richer Kaggle dataset to avoid training on duplicate matches.

@@ -19,8 +19,8 @@ import numpy as np
 import pandas as pd
 
 
-KAGGLE_IPL_CSV = Path("kaggle_ipl_dataset/IPL.csv")
-OUTPUT_CSV = Path("player_priors.csv")
+KAGGLE_IPL_CSV = Path("data/kaggle_ipl_dataset/IPL.csv")
+OUTPUT_CSV = Path("data/player_priors.csv")
 
 
 def normalize_name(name: str) -> str:
