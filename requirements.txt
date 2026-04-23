@@ -1,0 +1,21 @@
+# Datasets (optional: Kaggle downloads)
+kagglehub
+
+# Training
+pandas
+numpy
+scikit-learn
+tensorflow
+
+# API & backend
+fastapi
+uvicorn[standard]
+httpx
+requests
+openai>=1.0.0
+
+# Dashboard
+streamlit
+
+# ESPN cricket scores (fixtures) – requests + BeautifulSoup only
+beautifulsoup4
