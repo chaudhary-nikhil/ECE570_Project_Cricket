@@ -1,3 +1,4 @@
+import os
 import re
 from datetime import date, timedelta
 from typing import Any, Dict, List, Optional
@@ -12,7 +13,7 @@ import espn_scraper
 import weather
 
 
-DEFAULT_API_KEY = "2cecc518-dfe7-4fa0-baaf-446cd5060795"
+DEFAULT_API_KEY = os.environ.get("CRICKET_API_KEY", "")
 BACKEND_PREDICT_URL = "http://127.0.0.1:8000/predict"
 TOTALS_CSV_PATH = "data/ipl_match_team_totals.csv"
 

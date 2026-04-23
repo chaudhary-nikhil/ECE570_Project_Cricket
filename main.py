@@ -1,12 +1,10 @@
+import os
 from typing import Any, Dict, List, Optional
 
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel, Field
 
 import backend
-
-
-API_KEY = "2cecc518-dfe7-4fa0-baaf-446cd5060795"
 
 
 app = FastAPI(
@@ -74,8 +72,14 @@ def root() -> Dict[str, str]:
 @app.get("/live-scores")
 def get_live_scores() -> Dict[str, Any]:
     """Fetch live match scores from CricketData.org via backend helper."""
+    api_key = os.environ.get("CRICKET_API_KEY")
+    if not api_key:
+        raise HTTPException(
+            status_code=503,
+            detail="CRICKET_API_KEY is not set in the FastAPI process environment.",
+        )
     try:
-        data = backend.fetch_live_scores(API_KEY)
+        data = backend.fetch_live_scores(api_key)
     except RuntimeError as exc:
         # Map backend errors to HTTP errors
         raise HTTPException(status_code=502, detail=str(exc)) from exc

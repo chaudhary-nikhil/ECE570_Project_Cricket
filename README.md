@@ -46,9 +46,26 @@ pip install -r requirements.txt
 
 ## 3. Running the Project
 
+### Environment variables
+
+Export these in the shell that runs `uvicorn` (not Streamlit):
+
+| Variable | Required for | Notes |
+|---|---|---|
+| `OPENAI_API_KEY` | `/chat` | LLM backend for the chatbot |
+| `CRICKET_API_KEY` | `/live-scores` | [cricketdata.org](https://cricketdata.org) API key |
+| `OPENAI_CHAT_MODEL` | optional | Defaults to `gpt-4o-mini` |
+
+Without `OPENAI_API_KEY` the chat endpoint returns 500; without `CRICKET_API_KEY` the live-scores endpoint returns 503. Prediction and fixtures work without either.
+
+### Launch
+
 From the repository root, with `.venv` activated:
 
 ```bash
+export OPENAI_API_KEY="sk-..."
+export CRICKET_API_KEY="..."
+
 # Backend
 uvicorn main:app --reload --host 127.0.0.1 --port 8000
 
